@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolabr"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:titleTextColor="@color/lightWhite"
+            app:title="@string/app_name"/>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_below="@id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:tabBackground="@color/colorPrimary"
+        app:tabGravity="fill"
+        app:tabIndicator="@color/colorPrimary"
+        app:tabIndicatorHeight="3dp"
+        app:tabSelectedTextColor="@color/white"
+        app:tabIndicatorColor="#ecf0f1"
+        app:tabTextColor="@color/white">
+
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_paper"
+        android:layout_below="@+id/tab_layout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Scroll..."
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/tab_action"
+        android:src="@android:drawable/stat_notify_chat"
+        android:tint="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"/>
+
+</RelativeLayout>
+</layout>
